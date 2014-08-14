@@ -1,0 +1,29 @@
+<template name="deal">
+	{{>header}}
+	<div class="post">
+		<div>
+			<span class="line darkLine titleCase"><span style="font-weight: bold;">Congratulations!</span><br><br>You've got a deal!<br>We're emailing both of you right now<br>so you can arrange the details.<br><br><br>Start a Hagggle of your own below.</span>
+		</div>
+	</div>
+	{{>footer}}
+</template>
+
+<template name="nodeal">
+	{{>header}}
+	<div class="post">
+		<div>
+			<span class="line darkLine titleCase"><span style="font-weight: bold;">We're sorry.</span><br><br>Your prices seem too far apart, we're not sure a deal is going to happen.<br><br><br>Start a Hagggle of your own below.</span>
+		</div>
+	</div>
+	{{>footer}}
+</template>
+
+<template name="close">
+	{{>header}}
+	<div class="post">
+		<div>
+			<span class="line darkLine titleCase"><span style="font-weight: bold;">Almost!</span><br><br>You guys are so close, any chance you can come up just a little bit to get the deal done?<br><br>Go back and give it one more try.</span>
+		</div>
+	</div>
+	{{>footer}}
+</template>

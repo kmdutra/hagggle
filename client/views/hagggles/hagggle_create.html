@@ -1,0 +1,56 @@
+<template name="hagggleCreate">
+	<div class="line darkLine titleCase">
+		Creating a Hagggle is easy.
+		<br><br>Just enter your email, a description and<br>the minimum you will accept for the item
+		<br><br>Then we'll generate a Hagggle link for you to share.
+	</div>
+	<form class="main">
+		<div class="control-group">
+			<label class="control-label" for="seller">Your Email Address</label> 
+			<div class="controls">
+				<input name="seller" type="email" value="" placeholder="Your Email Address"/> 
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="message">Decription</label> 
+			<div class="controls">
+				<textarea name="description" type="text" value=""></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="sellPrice">Minimum Price You'll Accept</label> 
+			<div class="controls">
+				<input name="sellPrice" type="number" value="" placeholder="Minimum Price You'll Accept" /> 
+			</div>
+		</div>
+		
+		<div class="control-group"> 
+			<div class="controls">
+				<input type="submit" value="Submit" class="submit"/>
+			</div>
+		</div> 
+	</form>
+</template>
+
+
+<template name="hagggleCreated">
+	{{>header}}
+	<div class="post">
+		<div>
+			<span class="line darkLine titleCase"><span style="font-weight: bold;">Congratulations!</span><br><br>You just made a Hagggle.<br>Share the link below with your buyer or<br>add it to your Craigslist post.</span>
+			<span class="seller">You are Hagggling over...</span><br>
+				
+			<h3>
+				{{description}}
+			</h3>
+			<span class="line darkLine titleCase">
+				Your Hagggle link:<br>
+				<a style="font-family: Courier;" href="{{pathFor 'haggglePage'}}">hagggle.meteor.com{{pathFor 'haggglePage'}}</a>
+			</span>
+		</div> 
+
+	
+		
+	</div>
+	{{>footer}}
+</template>

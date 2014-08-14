@@ -1,0 +1,24 @@
+<template name="hagggleHome"> 
+	<div class="headerBar" id="headerBar">
+		<div class="headerBarOver" style="background-image:url('header_over.png');">
+			<div class="content">
+				<img src="logo.svg" class="logo">
+				<div class="name">HAGGGLE</div>
+				<div class="line">
+					Taking the awkward out of negotiations.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background-color: #8dc63f;">
+		<div class="">
+			What you need to do.<br>
+			Find something to sell.<br>
+			Decide on a minimum price.<br>
+			Create and Share your Hagggle.
+		</div>
+	</div>
+	<div class="post">
+		{{> hagggleCreate}}
+	</div>
+</template>

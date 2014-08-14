@@ -1,0 +1,37 @@
+<template name="hagggle">
+	{{>header}}
+	<div class="post">
+		<div>
+			<span class="line darkLine titleCase"><span style="font-weight: bold;">You've got a Hagggle.</span><br><br>It's a double blind digital negotiation.<br><br>Consider this items value and<br>decide your top dollar for it.</span>
+			<span class="seller">You are Hagggling over...</span><br>
+				
+			<h3>
+				{{description}}
+			</h3>
+		</div> 
+	
+		<form class="main">
+			<div class="control-group">
+				<label class="control-label" for="max">What is the maximum you would pay?</label> 
+				<div class="controls">
+					<input name="buyPrice" type="number" value="" placeholder="Enter max here"/> 
+				</div>
+				<input name="buyer" type="email" value="" placeholder="Your email"/>
+				
+				<input name="sellPrice" type="number" value="{{sellPrice}}" style="display: none;" placeholder="Enter max here"/>
+				<input name="seller" type="email" value="{{seller}}" style="display: none;" placeholder="Enter max here"/>
+				<input name="description" type="type" value="{{description}}" style="display: none;" placeholder="Enter max here"/>
+
+			</div>
+			
+			<div class="control-group"> 
+				<div class="controls">
+					<label class="control-label" for="max">Submit your offer and<br>we'll try to make you a deal.</label>
+					<input type="submit" value="Make a deal" class="submit"/>
+				</div>
+			</div> 
+		</form>
+	</div>
+	{{>footer}}
+</template>
+
